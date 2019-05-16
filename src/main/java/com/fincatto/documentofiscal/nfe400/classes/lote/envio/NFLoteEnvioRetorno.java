@@ -31,7 +31,7 @@ public class NFLoteEnvioRetorno extends DFBase {
     @Element(name = "xMotivo", required = true)
     private String motivo;
 
-    @Element(name = "cUF", required = true)
+    @Element(name = "cUF", required = false)
     private DFUnidadeFederativa uf;
 
     @Element(name = "dhRecbto", required = true)
@@ -47,10 +47,12 @@ public class NFLoteEnvioRetorno extends DFBase {
     private NFProtocoloInfo protocoloInfo;
 
     public void setVersao(final String versao) {
+        System.out.println("setVersão: " + versao);
         this.versao = versao;
     }
 
     public void setAmbiente(final DFAmbiente ambiente) {
+        System.out.println("setAmbiente: " + ambiente);
         this.ambiente = ambiente;
     }
 
@@ -67,6 +69,7 @@ public class NFLoteEnvioRetorno extends DFBase {
     }
 
     public void setUf(final DFUnidadeFederativa uf) {
+        System.out.println("setUF: " + uf);
         this.uf = uf;
     }
 
